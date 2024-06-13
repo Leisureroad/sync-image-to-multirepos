@@ -1,0 +1,10 @@
+steps:
+  - name: 'us-west1-docker.pkg.dev/flius-vpc-2/sync-image-repo/gcrane:v1'
+    env:
+      - '_IMAGE_TAG=${_IMAGE_TAG}'
+      - 'LOCATION=${LOCATION}'
+    args:
+      - '-c'
+      - |
+        /cp.sh
+    entrypoint: bash
